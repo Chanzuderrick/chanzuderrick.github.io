@@ -1,0 +1,263 @@
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Desktop Version*/
+@media screen and (min-width: 480px) {
+    body{
+        background-image: url(./bg.png);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .preloader{
+        display: block;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+    
+    .preloader img{
+        width: 10vw;
+    }
+    
+    .nav{
+        max-width: 100%;
+        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        padding: 0.8rem;
+        align-items: center;
+        background: linear-gradient(90deg, black, transparent);
+        border-radius: 12px;
+    }
+    
+    .nav .name{
+        color: white;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    
+    .nav .name span{
+        color: red;
+    }
+    
+    
+    
+    .nav a{
+        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-decoration: none;
+        color: white;
+        margin-right: 2rem;
+    }
+    
+    .nav a:first-child::after{
+        content: " | ";
+        margin-left: 1rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .nav a:last-child{
+        background-color: blue;
+        padding: 0.5rem;
+        margin-right: 2rem;
+    }
+    
+    
+    .nav a:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .ham{
+        display: none;
+    }
+
+    .medium{
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+        min-height: 90%;
+    }
+    
+    .medium div{
+        padding: 2rem;
+        font-size: 2.2rem;
+        color: white;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .medium div button{
+        color: white;
+        background: none;
+        border: 2px solid white;
+        width: max-content;
+        padding: 0.4rem;
+        font-size: 1.2rem;
+    }
+    
+    .end{
+        background: black;
+        color: white;
+        padding: 1rem;
+    }
+    
+    .end a{
+        text-decoration: none;
+        color: white;
+        padding: 0.4rem;
+        font-size: 1.5rem;
+    }    
+}
+
+
+/*Mobile Version*/
+@media screen and (max-width: 480px) {
+    body{
+        background-image: url(./bg.png);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .preloader{
+        display: block;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+    
+    .preloader img{
+        width: 10vw;
+    }
+    
+    .nav{
+        max-width: 100%;
+        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+        padding: 0.8rem;
+        align-items: center;
+        background: linear-gradient(90deg, black, transparent);
+        border-radius: 12px;
+    }
+    
+    .nav .name{
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .nav .name span{
+        color: red;
+    }
+    
+    
+    
+    .nav a{
+        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-decoration: none;
+        color: white;
+        margin-right: 2rem;
+    }
+    
+    .nav a:first-child::after{
+        content: " | ";
+        margin-left: 1rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .nav a:last-child{
+        background-color: blue;
+        padding: 0.5rem;
+        margin-right: 2rem;
+    }
+    
+    
+    .nav a:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .links{
+        display: none;
+    }
+
+    .ham{
+        color: white;
+        font-size: 1.2rem;
+    }
+    
+    .medium{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .medium span{
+        color: red;
+    }
+
+    .medium div:nth-child(2){
+        display: none;
+    }
+    
+    .medium div{
+        padding: 1rem;
+        font-size: 1.05rem;
+        width: 50%;
+        min-height: 76vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .medium div button{
+        color: white;
+        background: none;
+        border: 2px solid white;
+        width: max-content;
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+    
+    .end{
+        background: black;
+        color: white;
+        padding: 0.2rem;
+    }
+
+    .end p{
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .end a{
+        text-decoration: none;
+        color: white;
+        padding: 0.1rem;
+        font-size: 1rem;
+    }
+    
+}
